@@ -1,0 +1,45 @@
+name: "\U0001F41B Bug report"
+description: File a bug to help us improve Autiladus.
+title: "[Bug] "
+labels: ["bug", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please include as much detail as you can.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+      placeholder: Clear one-line description
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Command or UI action
+        2. Expected
+        3. Actual
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      placeholder: e.g., 0.1.0 or commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      placeholder: Paste relevant logs or attach images.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: OS, Node/Bun version, browser endpoint, LLM providers, anything else relevant.
