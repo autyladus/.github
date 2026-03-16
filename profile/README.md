@@ -1,4 +1,4 @@
-# Autiladus — AI Swarm Platform
+# Autiladus — Agent Legion 
 
 *Org: [github.com/autiladus](https://github.com/autiladus) · [autilad.us](https://autilad.us) · [Docs](https://autiladus.wokspec.org) · MIT*
 
