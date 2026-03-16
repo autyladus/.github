@@ -31,7 +31,7 @@ Request Orchestrator → Task Planner → Agent Pools → Consensus → Synthesi
               ┌──────────────────────────┼──────────────────────────┐
               ▼                          ▼                          ▼
         ┌──────────┐            ┌──────────┐            ┌──────────┐
-        │ Explorer  │            │  Critic  │            │   Tool   │
+        │ Explorer │            │  Critic  │            │   Tool   │
         │   Pool   │            │   Pool   │            │  Agents  │
         │(research)│            │(validate)│            │(execute) │
         └──────────┘            └──────────┘            └──────────┘
