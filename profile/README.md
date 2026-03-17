@@ -1,143 +1,93 @@
-# Autiladus — Agent Legion 
-
-*Org: [github.com/autiladus](https://github.com/autiladus) · [autilad.us](https://autilad.us) · [Docs](https://autiladus.wokspec.org) · MIT*
-
----
-
-You're juggling single-agent AI assistants. Debugging hallucinated code. Watching your AI produce plausible-but-wrong solutions.
-
-**Autiladus deploys a swarm of specialist AI agents** — explorers, critics, implementers — that validate each other's work and reach consensus before shipping code.
-
----
-
-## Why Autiladus?
-
-| Problem | Solution |
-|---------|----------|
-| Plausible but incorrect code | **Critic Pool** validates every solution |
-| Context window limits crash sessions | **Hierarchical Memory** (working/project/global) |
-| No transparency in AI decisions | **Agent-by-agent audit trail** |
-| Single point of failure | **Consensus Engine** — multi-agent agreement |
-| Linear scaling | **Parallel swarm** — simultaneous work |
-| Fixed agent count | **Dynamic Scaling** — 5/20/50+ agents |
-
----
-
-## The Swarm Architecture
+<div align="center">
 
 ```
-Request Orchestrator → Task Planner → Agent Pools → Consensus → Synthesizer
-                                         ↓
-              ┌──────────────────────────┼──────────────────────────┐
-              ▼                          ▼                          ▼
-        ┌──────────┐            ┌──────────┐            ┌──────────┐
-        │ Explorer │            │  Critic  │            │   Tool   │
-        │   Pool   │            │   Pool   │            │  Agents  │
-        │(research)│            │(validate)│            │(execute) │
-        └──────────┘            └──────────┘            └──────────┘
+█████╗ ██╗   ██╗████████╗██╗██╗      █████╗ ██████╗ ██╗   ██╗███████╗
+██╔══██╗██║   ██║╚══██╔══╝██║██║     ██╔══██╗██╔══██╗██║   ██║██╔════╝
+███████║██║   ██║   ██║   ██║██║     ███████║██║  ██║██║   ██║███████╗
+██╔══██║██║   ██║   ██║   ██║██║     ██╔══██║██║  ██║██║   ██║╚════██║
+██║  ██║╚██████╔╝   ██║   ██║███████╗██║  ██║██████╔╝╚██████╔╝███████║
+╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚══════╝
 ```
 
----
+**Multi-agent orchestration. Swarm coordination. Terminal-first.**
 
-## Core Features
+[![Site](https://img.shields.io/badge/autiladus.wokspec.org-111118?style=flat-square&color=b31237)](https://autiladus.wokspec.org)
+[![Discord](https://img.shields.io/badge/discord-T5KnUgAKK3-111118?style=flat-square&color=b31237)](https://discord.gg/T5KnUgAKK3)
+[![GitHub](https://img.shields.io/badge/github.com%2Fautiladus-111118?style=flat-square&color=b31237)](https://github.com/autiladus)
 
-- **Forge** — plan → execute → verify with guardrails
-- **Crucible** — max-autonomy runs with verification-first recovery
-- **Swarm Mode** — deploy 5/20/50+ specialist agents
-- **Hashline Editing** — content-hash anchored edits, zero stale-line errors
-- **Consensus Engine** — voting, scoring, ranking
-- **Memory Layers** — Redis (working), Vector DB (project), PostgreSQL (global)
+</div>
 
 ---
 
-## Dynamic Scaling
+## What Autiladus builds
 
-| Mode | Agents | Use Case |
-|------|--------|----------|
-| **Fast** | 5 | Quick fixes |
-| **Balanced** | 20 | Feature development |
-| **Deep Think** | 50+ | Complex architectures |
+Autiladus is a multi-agent orchestration framework. You describe a task. The orchestrator classifies complexity, decomposes it into work, and routes it to a coordinated fleet of specialist agents running in parallel. Results pass through a consensus engine before they surface.
 
----
+Not a single-agent assistant. Not a wrapper. Infrastructure for agent swarms.
 
-## Quick Start
-
-```bash
-# Install
-bunx autiladus install
-
-# Initialize
-autiladus init
-
-# Run a task
-autiladus forge "add user authentication"
-
-# Swarm mode
-autiladus forge --deep "rearchitect the backend"
+```
+Prompt → Orchestrator → Task Planner → Agent Fleet (parallel)
+                                              │
+                    ┌─────────────────────────┼─────────────────────────┐
+                    ▼                         ▼                         ▼
+             Explorer Agent           Critic Agent              Tool Agent
+             (discover, map)         (validate, score)         (execute, write)
+                    │                         │                         │
+                    └─────────────────────────┼─────────────────────────┘
+                                              ▼
+                                     Consensus Engine
+                                   (vote → agree → ship)
 ```
 
 ---
 
-## Commands
+## Core capabilities
 
-| Command | Description |
-|---------|-------------|
-| `autiladus init` | Scaffold config |
-| `autiladus forge "<task>"` | One-shot with verification |
-| `autiladus crucible "<task>"` | Autonomous with retries |
-| `autiladus autiloop <n> "<task>"` | Iterative refinement |
-| `autiladus runs` | Inspect ledger |
-| `autiladus doctor` | Verify integration |
+- **Swarm orchestration** — parallel agent fleets with automatic task routing
+- **Consensus engine** — multi-agent voting before results are returned
+- **Complexity-aware routing** — simple tasks get 2 agents; complex ones get 5+
+- **Forge / Crucible / Swarm** — CLI modes for one-shot, autonomous, and explicit swarm execution
+- **Browser agent** — Playwright-powered web automation inside your own authenticated session
+- **Ledger** — every run logged, every decision inspectable
 
 ---
 
-## Environment Variables
+## Repositories
 
-```bash
-GROQ_API_KEY           # Primary (Llama 3.3)
-OPENAI_API_KEY         # Fallback
-BROWSER_WS_ENDPOINT   # Remote browser
-ANTHROPIC_API_KEY    # Claude
-```
+| Repo | Description |
+|------|-------------|
+| [autiladus/autiladus](https://github.com/autiladus/autiladus) | Core platform — orchestration engine, swarm, CLI, web dashboard |
 
 ---
 
-## Philosophy
+## Current phase
 
-1. **Automation ≠ black box** — Every decision is auditable
-2. **Multiple eyes catch what one misses** — Critic Pool catches bugs
-3. **Consensus over confidence** — Agreement > certainty
-4. **Scale elastically** — Same tool, different scale
-5. **Verify before commit** — Ledger preserves every run
+`feature/swarm-mvp-phase1` — Swarm MVP in active development.
+
+Core swarm engine and consensus protocol are live. Dynamic scaling, hierarchical memory, and agent communication channels are next.
+
+Build updates and early access → **[Discord](https://discord.gg/T5KnUgAKK3)**
 
 ---
 
-## Documentation
+## Stack
 
-- [Installation](https://github.com/autiladus/autiladus/blob/main/docs/guide/installation.md)
-- [Architecture](https://github.com/autiladus/autiladus/blob/main/docs/architecture.md)
-- [API Reference](https://github.com/autiladus/autiladus/blob/main/docs/api.md)
-- [Configuration](https://github.com/autiladus/autiladus/blob/main/docs/configuration.md)
+`TypeScript` · `Next.js 15` · `Node.js` · `Groq (Llama 3.3)` · `OpenAI` · `Playwright` · `BullMQ` · `Redis` · `Zod` · `Vitest`
 
 ---
 
 ## Contribute
 
-```bash
-git checkout -b feature/your-feature
-npm run dev
-npm test
-# Fork → branch → PR against main
-```
+Looking for: systems engineers, AI/agent developers, CLI developers.
+
+→ [CONTRIBUTING.md](https://github.com/autiladus/autiladus/blob/main/CONTRIBUTING.md)  
+→ [Open issues](https://github.com/autiladus/autiladus/issues)  
+→ [Discord](https://discord.gg/T5KnUgAKK3)
 
 ---
 
-## Support
+<div align="center">
 
-- **Issues**: [github.com/autiladus/autiladus/issues](https://github.com/autiladus/autiladus/issues)
-- **Discussions**: [github.com/autiladus/autiladus/discussions](https://github.com/autiladus/autiladus/discussions)
-- **Security**: `security@wokspec.org`
+[autiladus.wokspec.org](https://autiladus.wokspec.org) · [discord.gg/T5KnUgAKK3](https://discord.gg/T5KnUgAKK3) · MIT · Part of [WokSpec](https://wokspec.org)
 
----
-
-MIT License · Built by [WokSpec](https://wokspec.org)
+</div>
