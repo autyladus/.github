@@ -90,4 +90,6 @@ Looking for: systems engineers, AI/agent developers, CLI developers.
 
 [autiladus.wokspec.org](https://autiladus.wokspec.org) · [discord.gg/T5KnUgAKK3](https://discord.gg/T5KnUgAKK3) · MIT · Part of [WokSpec](https://wokspec.org)
 
+[![Twitter](https://img.shields.io/twitter/follow/autiladus?style=flat-square&logo=x&label=%40autiladus)](https://x.com/autiladus)
+
 </div>
