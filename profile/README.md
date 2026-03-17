@@ -9,7 +9,7 @@
 ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚══════╝
 ```
 
-**Multi-agent orchestration. Swarm coordination. Terminal-first.**
+**Multi-agent orchestration. Legion coordination. Terminal-first.**
 
 [![Site](https://img.shields.io/badge/autiladus.wokspec.org-111118?style=flat-square&color=b31237)](https://autiladus.wokspec.org)
 [![Discord](https://img.shields.io/badge/discord-T5KnUgAKK3-111118?style=flat-square&color=b31237)](https://discord.gg/T5KnUgAKK3)
