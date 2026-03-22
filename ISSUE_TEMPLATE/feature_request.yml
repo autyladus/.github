@@ -1,37 +1,46 @@
-name: "\U0001F680 Feature request"
-description: Suggest an idea or improvement for Autiladus.
-title: "[Feat] "
-labels: ["enhancement", "triage"]
-assignees: []
+name: Feature Request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
-      value: |
-        Tell us what you want to see. The clearer the scope, the faster we can ship.
-  - type: input
-    id: summary
-    attributes:
-      label: Summary
-      placeholder: Clear one-liner
-    validations:
-      required: true
+      value: "Describe the feature you'd like."
+
   - type: textarea
     id: problem
     attributes:
-      label: Problem or motivation
-      placeholder: What pain does this solve?
+      label: What problem does this solve?
+      description: Context helps prioritize
+    validations:
+      required: true
+
   - type: textarea
-    id: proposal
+    id: solution
     attributes:
       label: Proposed solution
-      placeholder: Commands, UX, or API behavior you expect.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Site / UI
+        - System / API
+        - Automation / pipeline
+        - Web3 integration
+        - Infrastructure / deploy
+    validations:
+      required: true
+
+  - type: textarea
+    id: web3_context
+    attributes:
+      label: Web3 context (if applicable)
+      description: "Chain, protocol, standard (e.g. ERC-4337, LayerZero) — helps scope the work"
+
   - type: textarea
     id: alternatives
     attributes:
       label: Alternatives considered
-      placeholder: Other approaches you tried or rejected.
-  - type: textarea
-    id: context
-    attributes:
-      label: Additional context
-      placeholder: Links, prior art, or screenshots.
